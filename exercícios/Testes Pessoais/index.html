@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            align-items: center;
+            text-align: center;
+            background-color: rgb(201, 209, 233);
+        }
+
+        div {
+            background-color: rgb(104, 128, 209);
+            height: 50px;
+            width: 100px;
+            display: none;
+        }
+
+        nav:hover div {
+            display: inline-block;
+        }
+
+        nav a {
+            text-decoration: none;
+        }
+
+        div#fut1 {
+            border-radius: 10px 0px 0px 10px;
+            margin-right: -4px;
+        }
+
+        div#fut1:hover {
+            background-color: red;
+            transition-duration: .5s;
+        }
+
+        div#fut2 {
+            margin-right: -4px;
+        }
+
+        div#fut2:hover {
+            background-color:black;
+            transition-duration: .5s;
+        }
+
+        div#fut3 {
+            margin-right: -4px;            
+        }
+
+        div#fut3:hover {
+            background-color:green;
+            transition-duration: .5s;
+        }
+
+        div#fut4 {
+            border-radius: 0px 10px 10px 0px;
+        }
+
+        div#fut4:hover {
+            background-color: white;
+            transition-duration: .5s;
+        }
+
+
+    </style>
+    <title>Futebol</title>
+</head>
+<body>
+    
+    <nav>
+        <h1>Passe o mouse aqui para ver o menu</h1>
+        <a href="https://www.flamengo.com.br
+        " target="_blank">
+            <div class="teste" id="fut1"></div>
+        </a>
+        <a href="https://www.botafogo.com.br/" target="_blank">
+            <div class="teste" id="fut2"></div>
+        </a>
+        <a href="http://www.fluminense.com.br/">
+            <div class="teste" id="fut3"></div>
+        </a>
+        <a href="https://vasco.com.br
+" target="_blank">
+            <div class="teste" id="fut4"></div>
+        </a>
+    </nav>
+    <main>
+        <h1>Video de Futebol</h1>
+        <p>Clique na thumb e veja um video sobre <a href="#">futebol</a>. Depois volte para essa página.</p>
+        <a href="pagina02.html" target="_self"><img src="media/soccer.png" alt="futebol" width="450"></a>
+        <p><h2>Teste</h2></p> 
+       
+    </main>
+       
+</body>
+</html>

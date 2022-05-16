@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select com JavaScript</title>
+    <style>
+        body {
+            background-image: linear-gradient(to left, rgba(255, 0, 0, 0.767), rgba(255, 166, 0, 0.774));
+
+        }
+
+        main {
+            background-color: aqua;
+            width: 400px;
+            margin: auto;
+            border-radius: 10px;
+            text-align: center;
+            padding: 4px 10px;
+            box-shadow: 5px 5px 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <main>
+        <h1>Teste de Maior Idade</h1>
+        <select name="Ano" id="ano">
+            <option selected disabled>Selecione um ano</option>
+        </select>
+        
+        <button onclick="verificarIdade()">Verificar Idade</button>
+        <p id="idade">Aqui vai aparecer o resultado.</p>
+    </main>
+    
+    <script>
+
+        let anoAtual = new Date().getFullYear();
+
+        for (let i=anoAtual; i >= 1900; i--) {
+            document.getElementById("ano").innerHTML += `<option value='${i}'>${i}</option>`
+        }
+
+        function verificarIdade() {
+            let ano = Number(document.getElementById('ano').value);
+            let idade = anoAtual - ano
+                        
+            if (idade < 18) {
+                document.getElementById('idade').innerHTML = `Você tem ${idade} anos e é menor de idade.`
+            } else {
+                document.getElementById('idade').innerHTML = `Você tem ${idade} anos e é maior de idade.`
+            }
+        }
+
+        
+
+    </script>
+</body>
+</html>

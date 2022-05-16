@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fontes em CSS</title>
+    <style>
+        body {
+            font-family: 'Work Sans', Arial, Helvetica, sans-serif;
+            /* Medidas Absolutas
+            cm, mm, in, px, (pt, pc usadas em texto impresso)
+
+            Medidas Relativas
+            em, ex, rem, vw, vh, %
+
+            em = tamanho do "m" maiúsculo. = 16px
+
+            px e em são as medidas recomendadas pela W3C.
+            */
+            font-size: 1em;
+            font-weight: bold;
+            font-style: italic;
+            text-decoration: underline;
+        }
+
+        h1 {
+            /*font-family: 'Work Sans', sans-serif;
+            font-weight: bolder;
+            font-size: 3em;
+            font-style: italic;*/
+
+            /* shorthand font
+            font style - font wheight - font size - font family */
+            font: italic bolder 3em 'Work Sans', sans-serif;
+        }
+
+        h2 {
+            font: bold 2em 'Work Sans', sans-serif;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Trabalhando com fontes</h1>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque nihil laboriosam quaerat ipsam eaque possimus commodi neque eum blanditiis placeat suscipit, dolor, molestiae id mollitia quod enim quasi. Labore, perspiciatis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero enim consequuntur, dicta exercitationem quidem culpa nihil est debitis ab autem quas voluptates omnis quae quibusdam, minus doloremque fugit vel cumque?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam esse eum quia unde dolorem aliquid nemo, consectetur est at maiores. Distinctio consequuntur ab ut repudiandae dicta tempora corrupti consectetur quis!</p>
+    <h2>Subtítulo do Exercício</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, animi dignissimos dicta debitis eius aspernatur pariatur sed tempore ab neque commodi eligendi voluptatem, facilis magnam itaque. Provident aspernatur accusantium saepe.</p>
+</body>
+</html>
