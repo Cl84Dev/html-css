@@ -53,8 +53,24 @@
             width: 70px;
         }
 
+        .botaoPequeno:hover {
+            background-color: rgb(24, 22, 22);
+        }
+
         .botaoGrande {
             height: 45px;
+        }
+
+        .botaoGrande:hover {
+            background-color: rgb(70, 44, 44);
+        }
+
+        #operador:hover {
+            background-color: rgb(57, 63, 95);
+        }
+
+        #resultado:hover {
+            background-color: rgb(37, 59, 36);
         }
     </style>
 </head>
@@ -73,25 +89,25 @@
                 <td class="botaoPequeno" onclick="inserir('1')">1</td>
                 <td class="botaoPequeno" onclick="inserir('2')">2</td>
                 <td class="botaoPequeno" onclick="inserir('3')">3</td>
-                <td class="botaoPequeno" onclick="inserir('+')">+</td>
+                <td class="botaoPequeno" id="operador" onclick="inserir('+')">+</td>
             </tr>
             <tr>
                 <td class="botaoPequeno" onclick="inserir('4')">4</td>
                 <td class="botaoPequeno" onclick="inserir('5')">5</td>
                 <td class="botaoPequeno" onclick="inserir('6')">6</td>
-                <td class="botaoPequeno" onclick="inserir('-')">-</td>
+                <td class="botaoPequeno" id="operador" onclick="inserir('-')">-</td>
             </tr>
             <tr>
                 <td class="botaoPequeno" onclick="inserir('7')">7</td>
                 <td class="botaoPequeno" onclick="inserir('8')">8</td>
                 <td class="botaoPequeno" onclick="inserir('9')">9</td>
-                <td class="botaoPequeno" onclick="inserir('*')">x</td>
+                <td class="botaoPequeno" id="operador" onclick="inserir('*')">x</td>
             </tr>
             <tr>
-                <td class="botaoPequeno" onclick="calcular()">=</td>
+                <td class="botaoPequeno" onclick="calcular()" id="resultado">=</td>
                 <td class="botaoPequeno" onclick="inserir('0')">0</td>
                 <td class="botaoPequeno" onclick="inserir('.')">.</td>
-                <td class="botaoPequeno" onclick="inserir('/')">/</td>
+                <td class="botaoPequeno" id="operador" onclick="inserir('/')">/</td>
             </tr>
         </table>
     </div>
