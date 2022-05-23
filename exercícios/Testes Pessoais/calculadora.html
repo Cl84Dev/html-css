@@ -11,6 +11,7 @@
             margin: auto;
             width: 280px;
             padding: 10px 10px 10px 10px;
+            border-radius: 5px;
 
         }
 
@@ -22,7 +23,13 @@
             font-size: 2em;
             font-weight: bold;
             user-select: none;
-        }	
+        }
+
+        caption {
+            color: rgb(194, 193, 193);
+            font-size: .95em;
+            
+        }
 
         td {
             color: rgb(194, 193, 193);
@@ -32,6 +39,7 @@
         }
 
         #visor {
+            overflow-x: auto;
             background-color: rgb(138, 135, 135);
             height: 80px;
             max-width: 270px;
@@ -53,8 +61,9 @@
 <body>
     <div>
         <table>
+            <caption>Calculadora Simples</caption>
             <tr>
-                <td id="visor" colspan="4"></td>
+                <td id="visor" colspan="4" maxlength="10"></td>
             </tr>
             <tr>
                 <td class="botaoGrande" colspan="2" onclick="limpar()">C</td>
@@ -76,7 +85,7 @@
                 <td class="botaoPequeno" onclick="inserir('7')">7</td>
                 <td class="botaoPequeno" onclick="inserir('8')">8</td>
                 <td class="botaoPequeno" onclick="inserir('9')">9</td>
-                <td class="botaoPequeno" onclick="inserir('*')">*</td>
+                <td class="botaoPequeno" onclick="inserir('*')">x</td>
             </tr>
             <tr>
                 <td class="botaoPequeno" onclick="calcular()">=</td>
@@ -88,6 +97,7 @@
     </div>
 
     <script>
+
         function inserir(num) {
             let numero = document.getElementById('visor').innerHTML;
             document.getElementById('visor').innerHTML = numero + num;
@@ -103,7 +113,11 @@
         }
 
         function calcular() {
+            if (document.getElementById('visor').innerHTML != 0){
             document.getElementById('visor').innerHTML = eval(document.getElementById('visor').innerHTML)
+            } else {
+                window.alert('Digite a sua expressão para obter resultado')
+            }
         }
     </script>
 </body>
